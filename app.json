@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/partner/partner",
+    "pages/map/map",
+    "pages/index/web/web",
+    "pages/index/myinfo/myinfo",
+    "pages/home/uploadbanner/uploadbanner",
+    "pages/home/product/product",
+    "pages/index/fadeback/fadeback",
+    "pages/index/kefu/kefu",
+    "pages/home/productitem/productitem",
+    "pages/home/blackname/blackname",
+    "pages/index/myinfo/detail/detail",
+    "pages/index/orders/orders",
+    "pages/index/orders/confirm/confirm",
+    "pages/index/productedit/productedit",
+    "pages/buycar/buycar"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "image/homeunselect.png",
+        "selectedIconPath": "image/homeselect.png"
+      },
+      {
+        "pagePath": "pages/partner/partner",
+        "text": "合作方",
+        "iconPath": "image/partnerunselect.png",
+        "selectedIconPath": "image/partnerselect.png"
+      },
+      {
+        "pagePath": "pages/buycar/buycar",
+        "text": "购物车",
+        "iconPath": "image/buycarunselect.png",
+        "selectedIconPath": "image/buycarselect.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我",
+        "iconPath": "image/meunselect.png",
+        "selectedIconPath": "image/meselect.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

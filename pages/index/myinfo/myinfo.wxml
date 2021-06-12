@@ -1,0 +1,12 @@
+<block wx:for='{{myinfo}}'>
+  <view id='{{item.id}}' bindtap='detail' class='msgone {{clicked}}'>
+    <view class='left'>
+      <view class='title'>
+        {{item.title}}
+      </view>
+      <view class='time'>{{item.time}}</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+</block>
+<view wx:if='{{ifhavemore}}' bindtap='getmore' id='more'>点击加载更多</view>

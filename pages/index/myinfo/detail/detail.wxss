@@ -1,0 +1,14 @@
+/* pages/index/myinfo/detail/detail.wxss */
+.tongyi{
+  text-align: center;
+}
+#title{
+  font-size: 30px;
+}
+#time{
+  font-size: 10px;
+  color:#aaaaaa;
+}
+#content{
+  color: #aaaaaa;
+}

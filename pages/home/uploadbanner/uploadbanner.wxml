@@ -1,0 +1,27 @@
+<view id='title'>
+  寻找优秀图像设计师(ps)帮你上头条，让所有人鉴证您的爱情
+</view>
+
+<view id='hint'>上传招牌图片须知，请尽量按照4(宽):1(高)的比例以及小于4m的图片进行上传，否则会出现图像变形，前期仅作为大家免费玩耍体验，以后会严格要求图片尺寸和大小</view>
+<view id='firstdate'>
+  <view>{{firstdate}}首页招牌图片上传</view>
+  <view wx:for='{{[1,2,3,4,5]}}'>
+    <view>第{{index+1}}张图片
+      
+    </view>
+    <view style='width:{{width}}px;height:{{width/4}}px'>
+      <image src='{{firstlist[index]}}' bindtap='selectimg' id='{{item}}' class='banner' style='height:{{width/4}}px'></image>
+    </view>
+  </view>
+</view>
+
+<view id='seconddate'>
+  <view>{{seconddate}}首页招牌图片上传</view>
+  <view wx:for='{{[6,7,8,9,10]}}'>
+    <view>第{{index+1}}张图片
+    </view>
+    <view style='width:{{width}}px;height:{{width/4}}px'>
+      <image src='{{secondlist[index]}}' bindtap='selectimg' id='{{item}}' class='banner' style='height:{{width/4}}px'></image>
+    </view>
+  </view>
+</view>

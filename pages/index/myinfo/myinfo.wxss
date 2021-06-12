@@ -1,0 +1,28 @@
+/* pages/index/myinfo/myinfo.wxss */
+#more{
+  text-align: center;
+}
+.msgone{
+  border-bottom: 1px solid #aaaaaa;
+  height: 60px;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+  font-size: 30px;
+  height: 60px;
+  color: #aaaaaa;
+  line-height: 60px;
+}
+.title{
+  font-size: 30px;
+}
+.time{
+  font-size: 10px;
+  color: #aaaaaa;
+}
+.true{
+color: #dddddd;
+}

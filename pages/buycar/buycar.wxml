@@ -1,0 +1,48 @@
+<view id='head'>
+  <view id='edit' bindtap='edit'>{{edit}}</view>
+</view>
+<view id='body'>
+
+  <view class='center' wx:for='{{productlist}}' wx:for-key='{{item.productid}}'>
+    <view class='productitem'>
+      <view class='left'>
+        <checkbox-group name='subitem' bindchange='subitem' id='{{item.productid}}'>
+          <checkbox value='{{item.productid}}' checked='{{item.checked}}'></checkbox>
+        </checkbox-group>
+      </view>
+      <view class='center'>
+        <image src='{{item.firstimgpath}}' class='firstimg' mode='scaleToFill'></image>
+      </view>
+      <view class='right' style='width:{{width-170}}px;'>
+        <view class='title'>{{item.title}}</view>
+        <view class='xinghao'>{{item.xinghao}}</view>
+        <view class='priceandnum'>
+          <view>
+            <text>￥{{item.price}}</text>
+          </view>
+          <view class='num'>
+            <text bindtap='change' id='{{item.productid}}' data-action='reduce'>-</text>
+            <input value='{{item.num}}' disabled='disabled'></input>
+            <text bindtap='change' id='{{item.productid}}' data-action='add'>+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view id='none' wx:if='{{productlist.length==0}}'>空即是色，色即是空，您的购物车空空如也</view>
+<view id='foot' style='width:{{width}}px;'>
+  <view id='allselect'>
+    <checkbox-group name='dd' bindchange='allselect'>
+      <checkbox value='全选'>全选</checkbox>
+    </checkbox-group>
+  </view>
+  <view id='jiesuan' wx:if='{{payordel}}'>
+    <text>合计:</text>
+    <text space='emsp' id='price'>￥{{totalprice}} </text>
+    <view id='pay'>结算({{totalnum}})</view>
+  </view>
+  <view id='delete' wx:else>
+    <view id='del'>删除</view>
+  </view>
+</view>

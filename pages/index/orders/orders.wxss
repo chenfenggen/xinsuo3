@@ -1,0 +1,52 @@
+#root{
+  background-color: #dddddd;
+   padding: 5px;
+}
+page,#root{
+  height: 100%;
+}
+.itemcontainer{
+  background-color: white;
+}
+.supplier{
+
+}
+.arrow{
+  color: #dddddd;
+}
+.itemsection{
+
+}
+.orderitem{
+height: 145px;
+
+}
+.imageview{
+float: left;
+padding: 10px;
+}
+.image{
+  width: 120px;
+  height: 120px;
+}
+.descview{
+float: right;
+margin-top: 10px;
+}
+.num,.price{
+  text-align: right;
+}
+.num{
+  color: #aaaaaa;
+}
+.end{
+text-align: right;
+}
+.totalprice{
+  text-align: right;
+}
+.statu{
+text-align: center;
+width: 65px;
+background-color: red;
+}

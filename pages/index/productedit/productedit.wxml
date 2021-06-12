@@ -1,0 +1,53 @@
+<form bindsubmit='updateproduct'>
+  <label>产品名称</label>
+  <input name='name' value='{{productinfo.productname}}'></input>
+  <label>标题</label>
+  <input name='title' value='{{productinfo.title}}'></input>
+  <label>产品描述</label>
+  <input name='description' value='{{productinfo.description}}'></input>
+  <label>剩余数量</label>
+  <input name='surplus' value='{{productinfo.surplus}}'></input>
+  <label>是否上架</label>
+  <radio-group name='ifonline'>
+    <radio value='true' checked='true'>是</radio>
+    <radio value='false'>否</radio>
+  </radio-group>
+  <label>型号</label>
+  <input name='xinghao' value='{{productinfo.xinghao}}'></input>
+  <label>第一张图片</label>
+  <view>点击更换
+    <image src='/image/click.png' class='click' bindtap='selectimg' id='firstimgpath'></image>
+  </view>
+  <view>
+    <image src='{{productinfo.firstimgpath}}' class='titleimg'></image>
+  </view>
+  <label>第二张图片</label>
+  <view>点击更换
+    <image src='/image/click.png' class='click' bindtap='selectimg' id='secondimgpath'></image>
+  </view>
+  <view>
+    <image src='{{productinfo.secondimgpath}}' class='titleimg'></image>
+  </view>
+  <label>第三张图片</label>
+  <view>点击更换
+    <image src='/image/click.png' class='click' bindtap='selectimg' id='thirdimgpath'></image>
+  </view>
+  <view>
+    <image src='{{productinfo.thirdimgpath}}' class='titleimg'></image>
+  </view>
+  <label>第四张图片</label>
+  <view>点击更换
+    <image src='/image/click.png' class='click' bindtap='selectimg' id='forthimgpath'></image>
+  </view>
+  <view>
+    <image src='{{productinfo.forthimgpath}}' class='titleimg'></image>
+  </view>
+  <label>第五张图片</label>
+  <view>点击更换
+    <image src='/image/click.png' class='click' bindtap='selectimg' id='fifthimgpath'></image>
+  </view>
+  <view>
+    <image src='{{productinfo.fifthimgpath}}' class='titleimg'></image>
+  </view>
+  <button type='primary' form-type='submit'>保存</button>
+</form>

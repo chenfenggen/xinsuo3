@@ -1,0 +1,5 @@
+<view>
+  <view class='tongyi' id='title'>{{title}}</view>
+  <view class='tongyi' id='time'>{{time}}</view>
+  <view class='tongyi' id='content'>{{content}}</view>
+</view>

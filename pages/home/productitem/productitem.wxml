@@ -1,0 +1,25 @@
+<view id='head'>
+  <!--<text>{{sellerclass}}</text>-->
+</view>
+<view id='body'>
+  <block wx:for='{{items}}'>
+    <view class='item' style='width:{{width}}px;' id='{{item.id}}' bindtap='productdetail'>
+      <view class='imageview'>
+        <image src='{{item.image}}' class='image'></image>
+      </view>
+      <view class='descview' style='width:{{width-150}}px;'>
+        <view class='setheight'>
+          <view class='up desc'>{{item.desc}}</view>
+          <view class='down desc'>
+            <view class='left'>
+              <view class='price'>￥{{item.price}}</view>
+              <view class='address'>{{item.address}}</view>
+            </view>
+            <view class='right'><!--状态信息占位--></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:if='{{items.length<=10}}' id='more' bindtap='getmore'>更多</view>

@@ -1,0 +1,63 @@
+<view id="root">
+  <view id="head" bindtap='showme'>
+    <view>
+      <open-data type="userAvatarUrl" id="touxiang"></open-data>
+    </view>
+    <view id="nickname">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+  <view id="body">
+    <view id='tipsmodel'>
+    <view class='tips' id='1' bindtap='getstatu'>
+        <image class='tips-image' src='/image/unpay.png'></image>
+        <view>待付款</view>
+      </view>
+      <view class='tips' id='2' bindtap='getstatu'>
+        <image class='tips-image' src='/image/fahuo.png'></image>
+        <view>待发货</view>
+      </view>
+      <view class='tips' id='3' bindtap='getstatu'>
+        <image class='tips-image' src='/image/shouhuo.png'></image>
+        <view>待收货</view>
+      </view>
+      <view class='tips' id='4' bindtap='getstatu'>
+        <image class='tips-image' src='/image/comment.png'></image>
+        <view>待评价</view>
+      </view>
+      <view class='tips' id='5' bindtap='getstatu'>
+        <image class='tips-image' src='/image/tips.png'></image>
+        <view>已完成</view>
+      </view>
+    </view>
+    <view id='navmodel'>
+    <view class='nav' bindtap='productedit' wx:if='{{!ifsupplier}}'>
+        <image class='nav-icon' src='/image/edit.png'></image>
+        <view class='nav-text'>产品编辑</view>
+      </view>
+      <view class='nav' bindtap='kefu'>
+        <image class='nav-icon' src='/image/kefu.png'></image>
+        <view class='nav-text'>客服</view>
+      </view>
+      <view class='nav' bindtap='myinfo'>
+        <image class='nav-icon' src='/image/msg.png'></image>
+        <view class='nav-text'>消息中心</view>
+      </view>
+      <view class='nav' bindtap='fadeback'>
+        <image class='nav-icon' src='/image/fadeback.png'></image>
+        <view class='nav-text'>反馈</view>
+      </view>
+      <view class='nav' bindtap='myweb'>
+        <image class='nav-icon' src='/image/about.png'></image>
+        <view class='nav-text'>关于</view>
+      </view>
+      <view class='nav'>
+        <image class='nav-icon' src='/image/set.png'></image>
+        <view class='nav-text'>信息设置</view>
+      </view>
+    </view>
+    <view id='getimportantinfo' bindtap='share'>
+     <button open-type='share'>分享</button>
+    </view>
+  </view>
+</view>

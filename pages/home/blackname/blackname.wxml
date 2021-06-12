@@ -1,0 +1,21 @@
+<view>本功能需签订协议，夫妻双方均同意方可加入该计划，如果上了黑名单，夫妻另一方可以举证列举事实，证明是对方的过错，并且让全国人民来评理，或者投票，事实清楚将会上黑名单，全国人民进行谴责，具体细则可以大家共同探讨。愿您们家庭幸福，永远也不要上此黑名单，共同构建社会主义和谐社会。谈谈本功能开启的方式，先进行统计，合适的时候再开放。以前不是有很多人主张结婚也来个黑名单或者差评好评吗？现在技术层面没有问题，你可支持？你敢支持我就敢做。以下是统计界面，该功能暂时不开放，以免引起不必要的骚乱。如果需要该功能，就请在下面投票。以后支持的人数多了自然会开放。</view>
+<view>
+  <form bindsubmit='submit'>
+    <radio-group name='radio'>
+      <view>
+        <label>已有{{first}}人同意</label>
+      </view>
+
+      <radio value='同意' checked='true'>同意</radio>
+      <view>
+        <label>已有{{second}}人中立</label>
+      </view>
+      <radio value='中立'>中立</radio>
+      <view>
+        <label>已有{{third}}人反对</label>
+      </view>
+      <radio value='反对'>反对</radio>
+    </radio-group>
+    <button type='primary' form-type='submit' disabled='{{disabled}}'>{{button}}</button>
+  </form>
+</view>

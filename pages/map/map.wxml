@@ -1,0 +1,5 @@
+<!--pages/home/home.wxml-->
+<view>
+<map latitude="{{latitude}}" longitude="{{longitude}}" markers='{{markers}}'><cover-view id="haha">hahah</cover-view></map>
+
+</view>

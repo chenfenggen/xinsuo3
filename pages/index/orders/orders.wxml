@@ -1,0 +1,25 @@
+<view id='root'>
+  <block wx:for='{{orders}}'>
+    <view class='itemcontainer'>
+      <view class='supplier' id='{{item.supplierid}}'>{{item.suppliername}}
+        <text class='arrow' space='emsp'> ></text>
+      </view>
+      <view class='itemsection' wx:for='{{item.orderitem}}' wx:for-item='i'>
+        <view class='orderitem' id='{{i.productid}}'>
+          <view class='imageview'>
+            <image src='{{i.image}}' class='image'></image>
+          </view>
+          <view class='descview' style='width:{{width-150}}px'>
+            <view class='title'>{{i.title}}</view>
+            <view class='num'>x{{i.num}}</view>
+            <view class='price'>￥{{i.price}}</view>
+          </view>
+        </view>
+        <view class='totalprice'>￥{{item.totalprice}}</view>
+      </view>
+      <view class='end'>
+        <view class='statu' bindtap='action' id='{{index}}'>{{statu}}</view>
+      </view>
+    </view>
+  </block>
+</view>

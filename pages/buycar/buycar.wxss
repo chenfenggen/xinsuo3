@@ -1,0 +1,103 @@
+/* pages/buycar/buycar.wxss */
+
+page {
+  background-color: #eee;
+  height: 100%;
+  margin-bottom: 80px;
+}
+
+.priceandnum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.num, .productitem {
+  display: flex;
+}
+
+input {
+  width: 40px;
+  color: #aaa;
+  text-align: center;
+}
+
+#head {
+  background-color: white;
+}
+
+.firstimg {
+  width: 120px;
+  height: 120px;
+}
+
+#body {
+  padding: 15px;
+}
+
+.right {
+  font-size: 15px;
+}
+
+.itemcontainer {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+#edit {
+  background-color: #f04908;
+  width: 60px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title, .xinghao {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 60px;
+}
+
+#none {
+  text-align: center;
+}
+
+.priceandnum {
+}
+
+#pay, #del {
+  width: 100px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: red;
+}
+
+#foot, #allselect, #jiesuan {
+  height: 60px;
+  line-height: 60px;
+}
+
+#foot, #jiesuan {
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+#price {
+  color: red;
+}
+
+#foot {
+  background-color: white;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+
+.productitem {
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}

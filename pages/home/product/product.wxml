@@ -1,0 +1,38 @@
+<view>
+  <swiper id="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular='true' indicator-color='#ffffff' indicator-active-color='#000000' style='height:{{width}}px'>
+    <swiper-item wx:for="{{imgUrls}}">
+      <view class="slide-image" style='width:{{width}}px;height:{{width}}px;'>
+        <image src='item' mode='scaleToFill'></image>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<view id='title'>{{title}}</view>
+<view id='exchangetime'>
+  <picker bindchange='exchangetime' mode='date' start='{{startdate}}' end='{{enddate}}'>
+    <text>点击选择交易日期</text>
+    <image src='/image/click.png' id='pickerimage'></image>
+  </picker>
+  <view id='date'>{{date}}</view>
+</view>
+<view wx:if='{{showmodel}}' id='model' catchtouchmove='preventtouchmove'></view>
+<view class='xinghao' animation='{{animation}}'>
+<image id='close' src='/image/close.png'></image>
+  <view class='tongyi {{item.ifselect}}' bindtap='select' wx:for='{{xinghao}}' id='xinghao{{index}}'>
+    {{item.text}}
+  </view>
+</view>
+<view>
+  <view>--产品或者服务的描述--</view>
+  <view>{{desc}}</view>
+</view>
+<view id='bottom'>
+  <view id='left' style='width:{{width/3}}px'>
+    <view style='width:{{width/9}}px' wx:for='{{icon}}'>
+      <image src='{{item.image}}' style='width:{{width/9}}px;height:{{width/9}}px'></image>{{item.text}}</view>
+  </view>
+  <view id='right' style='width:{{width*2/3}}px;'>
+    <view class='right' style='width:{{width/3}}px;line-height:{{height}}px;' id='addcar' bindtap='rightclick'>加入购物车</view>
+    <view class='right' style='width:{{width/3}}px;line-height:{{height}}px;' id='justbuy' bindtap='rightclick' bindtap='xinghao'>立即购买</view>
+  </view>
+</view>

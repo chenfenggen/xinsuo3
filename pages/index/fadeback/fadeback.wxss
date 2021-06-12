@@ -1,0 +1,13 @@
+/* pages/index/fadeback/fadeback.wxss */
+textarea{
+  height: 300px;
+  width: 100%;
+}
+#false{
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+#true{
+  border: 1px solid red;
+   box-sizing: border-box;
+}

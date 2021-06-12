@@ -1,0 +1,103 @@
+/* pages/home/product/product.wxss */
+
+page {
+  margin-bottom: 80px;
+  background-color: white;
+}
+
+.slide-image {
+  background-color: red;
+}
+
+#pickerimage {
+  width: 20px;
+  height: 20px;
+}
+
+#date {
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#bottom, #left, #right {
+  display: flex;
+}
+
+.right {
+  text-align: center;
+}
+
+#left {
+  font-size: 10px;
+  text-align: center;
+}
+
+#bottom {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+  background-color: white;
+}
+
+#addcar {
+  background-color: rgba(248, 184, 9, 0.925);
+}
+
+#justbuy {
+  background-color: red;
+}
+
+#right {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.select {
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.unselect {
+  background-color: #eee;
+  color: black;
+}
+
+.select {
+  background-color: red;
+  color: white;
+}
+
+.tongyi {
+  height: 30px;
+  margin-left: 5px;
+}
+
+.xinghao {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  left: 0px;
+  bottom: -400px;
+  z-index: 5;
+}
+
+#model {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: black;
+  opacity: 0.5;
+  left: 0px;
+  top: 0px;
+  z-index: 4;
+}
+#close{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}

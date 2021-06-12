@@ -1,0 +1,96 @@
+<view id="root" wx:if='{{!ifhavesign}}'>
+  <view id='idselect'>
+    <picker mode='selector' range='{{item}}' value='0' bindchange='getdata'>
+      <view id='pickview'>
+        <text>点击选择身份</text>
+        <image src='/image/click.png'></image>
+      </view>
+      <view class='picktext'>{{pickdata}}</view>
+    </picker>
+    <view id='iddetail'>
+      <form bindsubmit='tijiao'>
+        <label for='name'>单位名称或者个人姓名
+          <input id='name' name='name' placeholder='请输入'></input>
+        </label>
+        <picker mode='region' range='{{item}}' value='0' bindchange='getaddress'>
+          <view>
+            <text>点击选择所在省市区</text>
+            <image src='/image/click.png'></image>
+          </view>
+          <view class='picktext'>{{region[0]}}{{region[1]}}{{region[2]}}</view>
+        </picker>
+        <label for='address'>详细地址至门牌号
+          <input id='address' name='address' placeholder='请输入'></input>
+        </label>
+        <label for='phone'>联系方式
+          <input id='phone' name='phone' placeholder='请输入与微信注册相同的号码'></input>
+        </label>
+        <label for='mysign'>个人签名
+          <input id='mysign' name='sign' placeholder='将用于展示给客户'></input>
+        </label>
+        <view id='pickedimg'>
+          <view id='textdesc'>请选择一张图片作为头像</view>
+          <view>
+            <image src='/image/click.png' bindtap='selectheadimg'></image>
+          </view>
+        </view>
+        <view>
+          <image src='{{path}}' id='img'></image>
+        </view>
+        <view id='warning'>注册可能需要获取您的微信注册信息，稍后提交时请您点击同意获取该信息，否则可能不能注册成功</view>
+        <button open-type='getUserInfo' disabled='{{ifcansign}}' type='primary' bindtap='changestatu'>允许程序获取您的信息</button>
+        <button type='primary' form-type='submit' disabled='{{!ifcansign}}'>提交注册</button>
+      </form>
+    </view>
+  </view>
+</view>
+
+<view wx:else='{{ifhavesign}}'>
+  <view id='title'>
+    <view>
+      <text id='desc'>新增一个商品或者服务</text>
+      <image src='/image/add.png' id='add'></image>
+    </view>
+  </view>
+  <view id='additem' style='height:{{width}}px;'>
+    <view id='preview' style='height:{{width}}px;width:{{width/2}}px;'>
+      <swiper id='swiper' style='width:{{width/2}}px;height:{{width/2}}px;' indicator-dots="true" autoplay="true" circular='true' indicator-color='#ffffff' indicator-active-color='#000000'>
+        <swiper-item wx:for='{{preitem}}'>
+          <image class='imageitem' src='{{item}}' style='width:{{width/2}}px;height:{{width/2}}px;'>图一</image>
+        </swiper-item>
+      </swiper>
+      <view id='virtualdesc' style='width:{{width/2}}px;height:{{width/2}}px;'>
+        <textarea id='virtualtext' style='width:{{width/2}}px;height:{{width/2}}px;' maxlength='500' placeholder='请输入产品详细描述，将会在粉色区域显示,换行请显示的打回车，否则真实显示情况可能有出入。' bindinput='decs'></textarea>
+      </view>
+    </view>
+    <view>
+      <view id='nav'>
+        <text space='emsp'>  左边为手机显示图片预览效果，添加五张图片作为您的一个产品的展示，第一张图片会作为产品预览的首图，请精心设计效果会更好，且为宽高相等图片，否则则可能显示不全。</text>
+        <view id='pickimg'>
+          <view wx:for='{{[1,2,3,4,5]}}'>
+            <text class='imgtxt'>第{{item}}张图片</text>
+            <image src='/image/tinyimg.png' class='tinyimg' id='{{index}}' bindtap='selectimg'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view id='desc'>
+      <view>
+        <label>产品或者服务标题(限30字以内)：
+          <input type='digit' style='width:{{width}}px;' maxlength='30'></input>
+        </label>
+        <label>产品价格：
+          <input type='digit' style='width:{{width}}px;'></input>
+        </label>
+        <label>库存数量：
+          <input type='number' style='width:{{width}}px;'></input>
+        </label>
+      </view>
+      <view id='save'>
+        <button type='primary' bindtap='save'>保存</button>
+      </view>
+    </view>
+  </view>
+</view>

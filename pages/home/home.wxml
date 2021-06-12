@@ -1,0 +1,19 @@
+<view>
+  <swiper id="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular='true' indicator-color='#ffffff' indicator-active-color='#000000' style='width:{{width}}px;height:{{width/4}}px;'>
+    <swiper-item wx:for="{{imgUrls}}">
+      <image src="{{item}}" class="slide-image" mode='scaleToFill' style='width:{{width}}px;height:{{width/4}}px;'></image>
+    </swiper-item>
+  </swiper>
+  <view id='body'>
+    <view id='1' class='item' style='background-color:pink' bindtap='buy'>一条龙服务</view>
+    <view id='2' class='item even' style='background-color:pink' bindtap='buy'>求婚道具</view>
+    <view id='3' class='item' style='background-color:pink' bindtap='buy'>创意婚礼</view>
+    <view id='4' class='item even' style='background-color:pink' bindtap='buy'>酒席预订</view>
+    <view id='5' class='item' style='background-color:pink' bindtap='buy'>婚纱租购</view>
+    <view id='6' class='item even' style='background-color:pink' bindtap='buy'>摄影师</view>
+    <view id='7' class='item' style='background-color:pink' bindtap='buy'>拍婚纱照</view>
+    <view id='8' class='item even' style='background-color:pink' bindtap='buy'>旅游婚庆</view>
+    <view id='9' class='item' style='background-color:pink' bindtap='uploadbanner'>昭告天下</view>
+    <view class='item even' style='background-color:#cccccc' bindtap='blacklist'>婚姻黑名单</view>
+  </view>
+</view>
